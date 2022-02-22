@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-api-deployment
+  labels:
+    app: python-api-deployment
+spec:
+  selector:
+    matchLabels:
+      app: python-api-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: python-api-deployment
+    spec:
+      containers:
+      - name: python-api
+        image: nareshbalajia/techceleration-sample-app:1.0.0
+        ports:
+        - containerPort: 8081
