@@ -10,7 +10,6 @@ spec:
     istio: ingress
   servers:
   - hosts:
-    - vpce-svc-06772e91e01dfa6a9.ap-south-1.vpce.amazonaws.com
     - "*.vpce-svc-06772e91e01dfa6a9.ap-south-1.vpce.amazonaws.com"
     port:
       name: http-dev
